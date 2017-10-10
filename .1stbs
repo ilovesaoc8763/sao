@@ -2,7 +2,7 @@ local recoil_table = {}
 recoil_table["m4"] = {
     base={7.8,7.8,7.8,7.8,7.8,7.8,7.8,13.8,13.8,13.8,13.8,9.8,9.8,9.8,9.8,9.8,10,10,10,10.1,10.1,10.1},
     x4={26,26,26,26,26,26,26,45,45,45,45,29,29,29,29,29,29,29,29,29,29,29},
-    all = {5,5,5,5,5,5,5,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6}
+    all={5,5,5,5,5,5,5,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6}
 }
 recoil_table["m16"] = {
     base={7,7,7,7,7,7,7,13.6,13.6,13.6,13.6,10.2,10.2,10.2,10.2,10.2,10.2,10.2,10.2,8,8,8},
@@ -79,13 +79,13 @@ function OnEvent(event, arg)
         repeat
         -- 循环
             seed = 1.0 + math.random()
-            shotTime = shotTime + 30 * seed
+            shotTime = shotTime + 100 * seed
             mode = recoil_mode()
             step = recoil_value(weapon,mode,shotTime)
 
             PressAndReleaseKey("Left")
-            Sleep(30 * seed)
-            MoveMouseRelative(0, step * seed)
+            Sleep(100 * seed)
+            MoveMouseRelative(0, step)
 
         until not IsMouseButtonPressed(1)
         -- 松开前循环
