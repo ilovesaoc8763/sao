@@ -85,7 +85,7 @@ function OnEvent(event, arg)
 
             PressAndReleaseKey("Left")
             Sleep(100 * seed)
-            MoveMouseRelative(0, step)
+            MoveMouseRelative(0, 4 * step)
 
         until not IsMouseButtonPressed(1)
         -- 松开前循环
