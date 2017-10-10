@@ -78,7 +78,7 @@ function OnEvent(event, arg)
         shotTime = 0.0
         repeat
         -- 循环
-            seed = 1.0 + math.random()
+            seed = 1.0 + 0.2 * math.random()
             shotTime = shotTime + 100 * seed
             mode = recoil_mode()
             step = recoil_value(weapon,mode,shotTime)
