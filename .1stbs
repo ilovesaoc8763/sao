@@ -1,91 +1,249 @@
-local recoil_table = {}
-recoil_table["m4"] = {
-    base={7,7,7,7,7,7,7,9,9,9,9,9,9,9,9,9,9,8,8,8,8,8},
-    x4={28,28,28,28,28,28,28,47,47,47,47,31,31,31,31,31,31,31,31,31,31,31}
-}
-recoil_table["m16"] = {
-    base={9,9,9,9,9,9,9,15.6,15.6,15.6,15.6,12.2,12.2,12.2,12.2,12.2,12.2,12.2,12.2,10,10,10},
-    x4={28,28,28,28,28,28,28,47,47,47,47,31,31,31,31,31,31,31,31,31,31,31}
-}
-recoil_table["ak"] = {
-    base={9.1,9.1,9.1,9.1,9.1,9.1,9.1,9.1,9.1,9.1,11,11,11,11,10.9,10.9,10.9,10.9,10.9,10.9,10.9},
-    x4={22,22,22,22,22,22,22,22,22,22,39,39,39,39,30,30,30,30,30,30,30}
-}
-recoil_table["ump9"] = {
-    base={7.5,7.5,7.5,7.5,7.5,7.5,7.5,8.9,8.9,8.9,8.9,9.1,9.1,9.1,9.1,9.1,9.1,9.1,9.1,9,9,9},
-    x4={27,27,27,27,27,27,27,37,37,37,37,30,30,30,30,30,30,30,30,30,30,30}
-}
--------------------------------------------------------------------------------------------------------
-local weapon = "none"
-local click_enbale = false
-
--------------------------------------------------------------------------------------------------------
-function recoil_value(_weapon,_mode,_shotTime)
-    if _weapon == "none" then
-        return 0
-    else
-        local step = (math.floor(_shotTime/100)) + 1
-        if step > 20 then
-            step = 20
-        end
-        return recoil_table[_weapon][_mode][step]
-    end 
-end 
-
--------------------------------------------------------------------------------------------------------
-function recoil_mode()
-    if IsKeyLockOn("capslock") then
-      return "x4"
-    else
-        return "base"
-    end
-end 
-
--------------------------------------------------------------------------------------------------------
-function OnEvent(event, arg)
-    OutputLogMessage("event = %s, arg = %d\n", event, arg)
-    if (event == "PROFILE_ACTIVATED") then
-        EnablePrimaryMouseButtonEvents(true)
-    elseif event == "PROFILE_DEACTIVATED" then
-        weapon = "none"
-        click_enbale = false
-        ReleaseKey("Left")
-        ReleaseMouseButton(1)
-    end
-
-    if (event == "MOUSE_BUTTON_PRESSED" and arg == 6) then
-        -- button 6 : Disable
-        weapon = "none"
- --   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 4) then
- --       -- button 4 : AKM
- --      weapon = "ak"
-    elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 5) then
-        -- button 5 : M16A4
-        weapon = "m16"
-    elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 7) then
-        -- button 7 : M4A1
-        weapon = "m4"
-    elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 8) then
-        -- button 8 : UMP9
-        weapon = "ump9"
-    elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1) then
-        -- button 1 : Shoot  
-        -- 循环
-        shotTime = 0.0
-        repeat
-            -- seed = (1.0 + math.random())/2
-            seed = 1.0
-            shotTime = shotTime + 30 * seed
-            mode = recoil_mode()
-            step = recoil_value(weapon,mode,shotTime)
-            OutputLogMessage("seed = %s\n", seed)
-            OutputLogMessage("step = %s\n", step)
-            PressAndReleaseKey("Left")
-            Sleep(30 * seed)
-            MoveMouseRelative(0, step * seed)
-
-        until not IsMouseButtonPressed(1)
-        -- 松开前循环
-    end
-
+function TransAK()
+		IsOnClick = false
+        IsM16 = false
+		IsUWP9 = false
+		IsUZI = false
+		IsSC = false
+		IsM4 = false
+        IsAK = not IsAK
 end
+function TransM16()
+		IsOnClick = false
+		IsSC = false
+	    IsAK = false
+        IsUWP9 = false
+		IsUZI = false
+		IsM4 = false
+        IsM16 = not IsM16
+end
+function TransUZI()
+		IsOnClick = false
+        IsM16 = false
+	    IsAK = false
+        IsUWP9 = false
+		IsSC = false
+		IsM4 = false
+		IsUZI = not IsUZI 
+end
+function TransUWP9()
+		IsOnClick = false
+        IsM16 = false
+	    IsAK = false
+		IsUZI = false
+		IsSC = false
+		IsM4 = false
+		IsUWP9 = not IsUWP9
+end
+function TransSC()
+		 IsOnClick = false
+         IsM16 = false
+	     IsAK = false
+         IsUZI = false
+		 IsUWP9 = false
+		 IsM4 = false
+		 IsSC = not IsSC
+end
+function TransM4()
+		 IsOnClick = false
+         IsM16 = false
+		 IsM4 = not IsM4
+	     IsAK = false
+         IsUZI = false
+		 IsUWP9 = false
+		 IsSC = false
+end
+function OutTransFunction()
+		 IsSC = false
+		 IsUWP9 = false
+         IsM16 = false
+	     IsAK = false
+         IsUZI = false
+		 IsM4 = false
+		 IsOnClick = false
+		 ReleaseMouseButton(1)
+end
+
+-------------------------------------------------------------------------------------------------
+
+function BoomAK()
+shotTime = 0       
+					repeat
+                              if (IsMouseButtonPressed(1)) then
+if	shotTime>1400 then
+                                   		MoveMouseRelative(0, 8.9)
+								elseif shotTime>1000 then
+                                   		MoveMouseRelative(0, 9)
+								elseif shotTime<1000 then
+                                  	 	MoveMouseRelative(0, 7.1)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30 
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-------------------------------------------------------------------------------------------------
+
+function ShiftAK()
+shotTime = 0       
+
+					repeat
+                              if (IsMouseButtonPressed(1)) then
+								if	shotTime>1400 then
+                                   		MoveMouseRelative(0, 11.5)
+								elseif shotTime>1000 then
+                                   		MoveMouseRelative(0, 11.5)
+								elseif shotTime<1000 then
+                                  	 	MoveMouseRelative(0, 8.5)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30 
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomAllAK()
+shotTime = 0
+repeat
+                              if (IsMouseButtonPressed(1)) then
+								if	shotTime>1400 then
+                                   		MoveMouseRelative(0, 7.5)
+								elseif shotTime>1000 then
+                                   		MoveMouseRelative(0, 7.5)
+								elseif shotTime<1000 then
+                                  	 	MoveMouseRelative(0, 6)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomM16()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 8)
+elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 10.2)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 13.6)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 7)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function ShiftM16()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 10)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 12.5)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 14.5)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 10.5)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomAllM16()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then 
+                                   		MoveMouseRelative(0, 8)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 8)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 11)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 7)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomM4()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 10.1)
+								elseif	shotTime>1500 then
+                                   		MoveMouseRelative(0, 10)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 9.8)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 13.8)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 7.8)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30 
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function ShiftM4()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 13)
+								elseif	shotTime>1500 then
+                                   		MoveMouseRelative(0, 12.5)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 11)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 19)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 11)
+
+
+
