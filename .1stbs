@@ -585,15 +585,15 @@ end
 			TransM4()
 		IsOnClick = false
     end
-    if (event == "MOUSE_BUTTON_PRESSED" and arg == 10) then --Trans SCAR SCARKey
+--    if (event == "MOUSE_BUTTON_PRESSED" and arg == 10) then --Trans SCAR SCARKey
 			--TransSC()
-			TransUZI()
-		IsOnClick = false
-    end
-    if (event == "MOUSE_BUTTON_PRESSED" and arg == 11) then --Trans SCAR SCARKey
-			TransSC()
-		IsOnClick = false
-    end
+--			TransUZI()
+--		IsOnClick = false
+--    end
+--     if (event == "MOUSE_BUTTON_PRESSED" and arg == 11) then --Trans SCAR SCARKey
+--			TransSC()
+--		IsOnClick = false
+--    end
     if (event == "MOUSE_BUTTON_PRESSED" and arg == 6) then --Out Trans OutTranskey
 		OutTransFunction()
 		IsOnClick = false
