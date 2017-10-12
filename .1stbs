@@ -596,7 +596,6 @@ end
     end
     if (event == "MOUSE_BUTTON_PRESSED" and arg == 6) then --Out Trans OutTranskey
 		OutTransFunction()
-		shotKey = " d63cb754d0029fe5"
 		IsOnClick = false
     end	
    if (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsAK) then
