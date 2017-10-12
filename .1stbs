@@ -244,6 +244,453 @@ shotTime = 0
                                    		MoveMouseRelative(0, 19)
 								elseif shotTime<680 then
                                   	 	MoveMouseRelative(0, 11)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
 
+-----------------------------------------------------------------------------------------------
+
+function BoomAllM4()
+shotTime = 0
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1600 then
+                                   		MoveMouseRelative(0, 6)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 7)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 7)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 5)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                            else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomSCAR()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1600 then
+                                   		MoveMouseRelative(0, 8)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 8)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 8.8)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 6.7)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+        
+end
+
+-----------------------------------------------------------------------------------------------
+
+function ShiftSCAR()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1600 then
+                                   		MoveMouseRelative(0, 10.7)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 10.7)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 11)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 8.7)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+        
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomAllSCAR()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1600 then
+                                   		MoveMouseRelative(0, 6)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 7)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 7)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 5)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomUMP9()
+shotTime = 0    
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 7)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 7.1)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 6.9)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 5.5)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function ShiftUMP9()
+shotTime = 0    
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 8.5)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 8.6)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 8.6)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 7)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomAllUMP9()
+shotTime = 0    
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 4)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 4)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 4.3)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 4)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomAKPoint()
+shotTime = 0       
+
+					repeat
+                              if (IsMouseButtonPressed(1)) then
+								if	shotTime>1400 then
+                                   		MoveMouseRelative(0, 28)
+								elseif shotTime>1000 then
+                                   		MoveMouseRelative(0, 37)
+								elseif shotTime<1000 then
+                                  	 	MoveMouseRelative(0, 20)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+        
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomM16Point()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then 
+                                   		MoveMouseRelative(0, 29)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 29)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 45)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 26)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+        
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomSCARPoint()
+shotTime = 0 
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1600 then
+                                   		MoveMouseRelative(0, 29)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 29)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 45)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 26)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomUMP9Point()
+shotTime = 0    
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1840 then
+                                   		MoveMouseRelative(0, 28)
+								elseif	shotTime>1000 then
+                                   		MoveMouseRelative(0, 28)
+								elseif shotTime>680 then
+                                   		MoveMouseRelative(0, 35)
+								elseif shotTime<680 then
+                                  	 	MoveMouseRelative(0, 25)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-----------------------------------------------------------------------------------------------
+
+function BoomUZI()
+shotTime = 0   
+					repeat
+                             if (IsMouseButtonPressed(1)) then
+								if	shotTime>1680 then
+                                   		MoveMouseRelative(0, 14)
+								elseif	shotTime>920 then
+                                   		MoveMouseRelative(0, 14)
+								elseif shotTime>440 then
+                                   		MoveMouseRelative(0, 6.5)
+								elseif shotTime<440 then
+                                  	 	MoveMouseRelative(0, 4)
+								end
+							PressAndReleaseKey("Left")
+                                  Sleep(30)
+shotTime = shotTime+30
+                             else
+                          		break
+                        	  end
+					until( not IsOnClick )
+end
+
+-------------------------------------------------------------------------------------------------------
+
+function OnEvent(event, arg)
+    OutputLogMessage("event = %s, 键号是 = %s\n", event, arg)
+if (event == "MOUSE_BUTTON_RELEASED" and arg == 1) then
+-- 鼠标按键1已被释放
+		IsOnClick = false	
+		ReleaseKey("Left")
+end
+    if (event == "PROFILE_ACTIVATED") then
+        EnablePrimaryMouseButtonEvents(true)
+    elseif event == "PROFILE_DEACTIVATED" then
+		IsOnClick = false
+		--ReleaseKey("Left")
+
+        --ReleaseMouseButton(1)  -- to prevent it from being stuck on
+    end
+IsOnClick = false
+if (event == "MOUSE_BUTTON_PRESSED" and arg == 1) then
+IsOnClick = not IsOnClick
+		--PressKey("Left")
+end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 4) then --Trans 啊K  AKkey
+    OutputLogMessage("event AKAK\n", event, arg)
+			TransAK()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 5) then --Trans M M16key
+			TransM16()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 8) then --Trans ump UMP9key
+			TransUWP9()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 7) then --Trans SCAR SCARKey
+			--TransSC()
+			TransM4()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 10) then --Trans SCAR SCARKey
+			--TransSC()
+			TransUZI()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 11) then --Trans SCAR SCARKey
+			TransSC()
+		IsOnClick = false
+    end
+    if (event == "MOUSE_BUTTON_PRESSED" and arg == 6) then --Out Trans OutTranskey
+		OutTransFunction()
+		shotKey = " d63cb754d0029fe5"
+		IsOnClick = false
+    end	
+   if (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsAK) then
+	if not IsModifierPressed("alt") then
+		if	IsKeyLockOn("capslock" )  then
+   		BoomAKPoint() 
+		elseif IsKeyLockOn("numlock" )  then
+			if not IsModifierPressed("shift") then
+		BoomAK()
+			else
+		ShiftAK()
+			end
+		else 
+		BoomAllAK()
+		end 
+    end
+    
+----------------------------------------------------------------------------------------------------------------
+
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsSC) then --SC
+	if not IsModifierPressed("alt") then
+		if	IsKeyLockOn("capslock" )  then
+   		BoomSCARPoint() 
+		elseif IsKeyLockOn("numlock" )  then
+			if not IsModifierPressed("shift") then
+		BoomSCAR()
+			else
+		ShiftSCAR()
+			end
+		else 
+		BoomAllSCAR()
+		end 
+    end 
+    
+----------------------------------------------------------------------------------------------------------------
+
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsM4) then --SC
+	if not IsModifierPressed("alt") then
+		if	IsKeyLockOn("capslock" )  then
+   		BoomSCARPoint() 
+		elseif IsKeyLockOn("numlock" )  then
+			if not IsModifierPressed("shift") then
+		BoomM4()
+			else
+			ShiftM4()
+						end
+		else 
+		BoomAllM4()
+		end 
+    end 
+----------------------------------------------------------------------------------------------------------------
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsM16) then
+	if not IsModifierPressed("alt") then
+		if	IsKeyLockOn("capslock" )  then
+   		BoomM16Point() 
+		elseif IsKeyLockOn("numlock" )  then
+			if not IsModifierPressed("shift") then
+         BoomM16()
+			else
+		ShiftM16()
+			end
+		else 
+         BoomAllM16() 
+		end 
+    end
+    
+------------------------------------------------------------------------------------------------------------
+
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsUWP9) then  
+	if not IsModifierPressed("alt") then
+		if	IsKeyLockOn("capslock" )  then
+   		BoomUMP9Point() 
+		elseif IsKeyLockOn("numlock" )  then
+			if not IsModifierPressed("shift") then
+   		BoomUMP9() 
+			else
+		ShiftUMP9()
+			end
+		else 
+   		BoomAllUMP9()   
+		end     
+    end
+    
+------------------------------------------------------------------------------------------------------------
+
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1 and IsUZI) then
+	if not IsModifierPressed("alt") then
+		BoomUZI()
+	end
+   elseif (event == "MOUSE_BUTTON_PRESSED" and arg == 1) then
+if not IsModifierPressed("alt") then
+		PressKey("Left") 
+end
+    end	
+end
 
 
